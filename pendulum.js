@@ -178,8 +178,8 @@ function evolve_rk4(dtime){
 }
 unit_step=Math.round(unit_step/4); //减小计算量
 evolve = evolve_rk4; //选用四阶rounge-kutta法
-bugout.log("method:rk_4")
-bugout.log(`unit_step:${unit_step}`)
+// bugout.log("method:rk_4")
+// bugout.log(`unit_step:${unit_step}`)
 
 function setSize() { //根据窗口大小重新调整
   canvas.width = window.innerWidth;
@@ -267,7 +267,7 @@ function update(timestamp) {
       }
       Energy = getEnergy();
       
-      bugout.log(String((Energy-start_E)/start_E)+" "+String( timestamp-start_T));
+      // bugout.log(String((Energy-start_E)/start_E)+" "+String( timestamp-start_T));
 
     }
     previous=timestamp;
