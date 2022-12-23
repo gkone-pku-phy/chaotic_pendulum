@@ -112,7 +112,7 @@ function getEnergy(){
   }
   return res;
 }
-function getAcc(theta_,v_){ // 状态参量theta,v用参数传递，其他的用全局变量
+function getAcc(theta_,v_){ // 获得加速度，状态参量theta,v用参数传递，其他的用全局变量
   let M = NewMatrix(count);
   let b = NewArray(count);
   for(var i=0;i<count;i++){
@@ -135,13 +135,13 @@ function getAcc(theta_,v_){ // 状态参量theta,v用参数传递，其他的用
 }
  // dtime以秒为单位计数
 // 第一种方式
-function evolve_1(dtime){
-  acc = getAcc(theta,v);
-  for(var i=0;i<count;i++){
-    theta[i]+= v[i]*dtime;
-    v[i]+= acc[i]*dtime ; 
-  }
-}
+// function evolve_1(dtime){
+//   acc = getAcc(theta,v);
+//   for(var i=0;i<count;i++){
+//     theta[i]+= v[i]*dtime;
+//     v[i]+= acc[i]*dtime ; 
+//   }
+// }
 // 第二种方式
 // function evolve_2(dtime){
 //   acc = getAcc(theta,v);
